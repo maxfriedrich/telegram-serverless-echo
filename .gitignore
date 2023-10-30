@@ -1,0 +1,13 @@
+.DS_Store
+*.pyc
+.idea
+.vscode
+.ruff_cache
+
+.terraform
+.terraform.lock.hcl
+terraform.tfstate*
+package
+dist
+lambda.zip
+.env

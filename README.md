@@ -1,0 +1,17 @@
+# telegram-serverless-echo
+
+Example Telegram bot that is deployed to AWS Lambda.
+
+## Build and deploy
+
+```bash
+./build_lambda.sh # package echo/bot.py and dependencies as lambda.zip
+TF_VAR_telegram_token=<token> terraform -chdir=terraform apply
+# the bot's function url is returned as an output
+```
+
+## Configure the bot webhook
+
+```bash
+curl -F "url=https://...on.aws/" https://api.telegram.org/bot<token>/setWebhook
+```
